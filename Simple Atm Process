@@ -1,0 +1,69 @@
+package CollectionFramework;
+import java.util.*;
+
+public class atmTransacation {
+
+	public static void main(String[] args) {
+		//Getting input from the User
+		int balance = 10000,withdrawal,Despoit;
+		Scanner sc = new Scanner(System.in);
+		//basic guide Statements
+		System.out.println("enter 1 to withdrawal");
+		System.out.println("enter 2 to Despoit");
+		System.out.println("enter 3 to check balance");
+		System.out.println("enter 4 Exit");
+		System.out.println("enter the number to procced");
+		int n = sc.nextInt();
+		//Switch for outputs
+		switch(n) {
+		//withdrawal process
+		case 1: 
+			System.out.println("enter the amount to withdrawal");
+			withdrawal = sc.nextInt();
+			if(balance>=withdrawal) {
+				balance = balance-withdrawal;
+				System.out.println("The amount is processing "+ withdrawal);
+				System.out.println("please collect your money");
+				System.out.println("-----------------------------------------");
+				System.out.println("The avail balance is = "+ balance);
+				System.out.println("-----------------------------------------");					
+			}
+			else {
+				System.out.println("insufficient Funds");
+							}
+		   break;
+		   //Despoit process
+		case 2 :
+			System.out.println("enter the amount to despoit");
+			Despoit=sc.nextInt();
+			if(Despoit>0) {
+				balance = balance +Despoit;
+				System.out.println("Despoit succesfully"+ Despoit);
+				System.out.println("-----------------------------------------");
+				System.out.println("The avail balance is = "+ balance);
+				System.out.println("-----------------------------------------");
+			} else 
+			{ 
+				System.out.println("Enter the correct amount to Despoit");
+			}
+			break;
+		case 3 :
+		//check balance
+			{
+			
+			System.out.println("-----------------------------------------");
+			System.out.println("The avail balance is = "+ balance);
+			System.out.println("-----------------------------------------");	
+			
+		}break;
+		
+		case 4 :
+		// Exit process
+			{
+			System.out.println("Thank you Visit Again ");
+			System.exit(n);
+		}
+	}
+
+}
+	}
