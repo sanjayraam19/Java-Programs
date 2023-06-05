@@ -1,0 +1,31 @@
+public class upper {
+	static String toCheck(String val) {
+		String newstr=""; String str ="";
+		for(int i =0 ; i<=val.length()-1;i++) {
+		while(i<=val.length()-1 && val.charAt(i)!=' ') {
+			str = str+val.charAt(i);
+			i++;
+			
+		}
+		 newstr= str+ " "+newstr;
+		 str="";
+		}
+	return newstr;
+	}
+
+	
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner(System.in);
+
+	System.out.println("enter the value ");
+	String val = sc.nextLine();
+	String res= toCheck(val);
+	System.out.println(res);		
+	}
+	
+	
+			
+	
+	
+}
